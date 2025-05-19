@@ -16,9 +16,13 @@ void setup() {
 
 void loop() {
   float t = dht.readTemperature();
+  float h = dht.readHumidity();
 
   lcd.setCursor(0, 0);
   lcd.print("Temp: " + String(t) + " C");
+
+  lcd.setCursor(0, 1);
+  lcd.print("Humedity: " + String(h) + "%");
 
   delay(2000);
 }
